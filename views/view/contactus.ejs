@@ -1,0 +1,148 @@
+<% layout('./layouts/boilerplate.ejs')%> 
+<style>
+      /* .elementor-6 .elementor-element.elementor-element-44c5884f > .elementor-background-overlay {
+    background-color: var(#23282E);
+    opacity: 0.8;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+} */
+
+</style>
+<div class="h-96 " style="overflow: hidden;">
+    <img class="h- w-full" src="/imgs/mont.jpg" alt="" srcset="">
+    <div class=" h-96 elementor-background-overlay"></div>
+
+
+</div>
+
+<div class=" text-white p-8">
+    <div  style="margin-top: -25em;" class="p-2 rounded-xl z-50 relative max-w-2xl mx-auto">
+      <div   class="text-center  mb-10">
+        <h1 class="font-bold text-white text-3xl mb-2">Contact Us</h1>
+        <p class="text-gray-200">We use an agile approach to test assumptions and connect with the needs of your audience early and often.</p>
+      </div>
+      <form  class="bg-white rounded-xl p-3" action="/contact" method="POST">
+        <div class="mb-4 md:flex md:justify-between">
+          <div class="mb-4 md:mb-0 md:mr-2">
+            <label class="block mb-1 text-black" for="first-name">First Name</label>
+            <input name="firstname" class="w-full h-10 px-3 text-base placeholder-gray-600 bg-gray-100 text-black border-0 rounded-lg focus:shadow-outline" type="text" id="first-name" placeholder="Bonnie"/>
+          </div>
+          <div class="md:ml-2">
+            <label class="block mb-1 text-black" for="last-name">Last Name</label>
+            <input name="lastname" class="w-full h-10 px-3 text-base placeholder-gray-600 bg-gray-100 text-black border-0 rounded-lg focus:shadow-outline" type="text" id="last-name" placeholder="Green"/>
+          </div>
+        </div>
+        <div class="mb-4 md:flex md:justify-between">
+          <div class="mb-4 md:mb-0 md:mr-2">
+            <label class="block mb-1 text-black" for="email">Your email</label>
+            <input name="email" class="w-full h-10 px-3 text-base placeholder-gray-600 bg-gray-100 text-black border-0 rounded-lg focus:shadow-outline" type="email" id="email" placeholder="name@gmail.com"/>
+          </div>
+          <div class="md:ml-2">
+            <label class="block mb-1 text-black" for="phone">Phone Number</label>
+            <input name="number" class="w-full h-10 px-3 text-base placeholder-gray-600 bg-gray-100 text-black border-0 rounded-lg focus:shadow-outline" type="tel" id="phone" placeholder="+12 345 6789"/>
+          </div>
+        </div>
+        <div class="mb-6">
+          <label class="block mb-1 text-black" for="message">Your message</label>
+          <textarea name="message" class="w-full h-32 px-3 py-2 text-base placeholder-gray-600 bg-gray-100 text-black border-0 rounded-lg focus:shadow-outline" id="message" placeholder="Leave a comment..."></textarea>
+        </div>
+        <span class="text-gray-600 text-xs  ">By submitting this form you agree to our terms and conditions and our privacy policy which explains how we may collect, use and disclose your personal information including to third parties.</span>
+        <br>
+        <div class="mb-6">
+          <button  class="w-full px-3 py-4 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none" type="submit">Send message</button>
+        </div>
+      </form>
+ 
+    </div>
+  </div>
+  <div class="flex justify-between ml-5 mr-5">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+      
+            <!-- Email Us Section -->
+            <div>
+              <div class="mb-4 inline-block">
+                <!-- Replace with appropriate svg or image -->
+               <div class="rounded-xl p-4 bg-gray-300"><i class="bi text-3xl bi-envelope-fill"></i></div>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Email us:</h3>
+              <p class="text-gray-600 mb-4">Email us for general queries, including marketing and partnership opportunities.</p>
+              <a href="mailto:hello@flowbite.com" class="text-blue-600 hover:underline"> Info@awolaw.com</a>
+            </div>
+      
+            <!-- Call Us Section -->
+            <div>
+              <div class="mb-4 inline-block">
+                <!-- Replace with appropriate svg or image -->
+                <div class="rounded-xl p-4 bg-gray-300"><i class="bi text-3xl bi bi-telephone-fill"></i></div>
+
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Call us:</h3>
+              <p class="text-gray-600 mb-4">Call us to speak to a member of our team. We are always happy to help.</p>
+              <a href="tel:+16467865060" class="text-blue-600 hover:underline">+1 (301) 482-6275</a>
+            </div>
+      
+            <!-- Support Section -->
+            <div>
+              <div class="mb-4 inline-block">
+                <!-- Replace with appropriate svg or image -->
+                <div class="rounded-xl p-4 bg-gray-300"><i class="bi text-3xl bi bi-life-preserver"></i></div>
+
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Support</h3>
+              <p class="text-gray-600 mb-4">Email us for general queries, including marketing and partnership opportunities.</p>
+              <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Support center</button>
+            </div>
+      
+        </div>
+      </div>
+      
+  </div>
+  <section class="bg-[#EFEBE5] ">
+    <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+        <div class="elementor-custom-embed">
+			<iframe loading="lazy" class="w-full min-h-96 rounded-xl" src="https://maps.google.com/maps?q=10411%20Motor%20City%20Dr.%2C%20Suite%20750%20Bethesda%2C%20MD%2020817&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near" title="10411 Motor City Dr., Suite 750 Bethesda, MD 20817" aria-label="10411 Motor City Dr., Suite 750 Bethesda, MD 20817"></iframe>
+		</div>
+        <div class="mt-2 md:mt-0 text-center">
+            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 ">Let's Talk            </h2>
+            <p class="mb-6 font-light text-gray-500 md:text-lg">Contact us today to schedule a consultation and learn how we can help you achieve your legal goals.                .</p>
+            <div class="flex ">
+                <div class=" flex text-center flex-col ml-3">
+                    <span class=" mb-4 text-[#043E60] text-xl">
+                        Montgomery Office
+
+                    </span>
+                    <span class=" mb-4 text-sm text-center">
+                        10411 Motor City Dr., Suite 750 Bethesda, MD 20817
+
+
+                    </span>
+                    <span class=" mb-4 text-[#043E60] text-xl">(301) 482-6275</span>
+                </div>
+                <div class=" flex text-center flex-col ml-3">
+                    <span class=" mb-4 text-[#043E60] text-xl">
+                        Prince Georges Office
+
+                    </span>
+                    <span class=" mb-4 text-sm text-center">
+                        7323 Hanover Parkway Suite D, Greenbelt, MD 20770.
+                    </span>
+                    <span class=" mb-4 text-[#043E60] text-xl">(301) 482-6275</span>
+                </div>
+            </div>
+            <hr>
+
+            <span>
+                Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.
+
+
+            </span>
+           
+            <span>
+                We are open from 8am — 5pm week days.
+
+
+            </span>
+      
+        </div>
+    </div>
+</section>

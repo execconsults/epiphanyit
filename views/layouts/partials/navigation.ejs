@@ -1,0 +1,103 @@
+
+<style>
+  .active{
+    --tw-text-opacity:1;
+    color: rgb(59, 126, 164 / var(--tw-text-opacity));
+  }
+  @media only screen and (max-width: 600px) {
+
+  .tch{
+    display: none;
+  }
+}
+
+.nav-linkss{
+  font-size: 1.2em;
+}
+</style>
+<header>
+  <nav class=" bg-[#EFEBE5] border-gray-200   w-full " style="">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <a href="." class="flex lg:order-1 items-center">
+              <img src="/imgs/Awo-Law-Final.png" class="mr-3 h-40 sm:h-40" alt="Flowbite Logo" />
+              <!-- <span class="self-center text-xl font-semibold whitespace-nowrap ">Flowbite</span> -->
+          </a>
+          <div class="flex items-center lg:order-3">
+              <a href="/contact-us" class="text-gray-800 bg-gray-100 tch focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 ">Get In Touch </a>
+              <div class="languege">
+                <div style="width: 11em;" id="google_translate_element"></div>
+        
+            </div>
+              <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="mobile-menu-2" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                  <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </button>
+          </div>
+          <div class="hidden justify-between  items-center w-full lg:flex lg:w-auto lg:order-2" id="mobile-menu-2">
+              <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                  <li>
+                      <a href="/" class="block homebtn nav-linkss hover:text-[#3b7ea4] py-2 pr-4 pl-3  border-t border-white hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 text-gray-700 " aria-current="page">Home</a>
+                  </li>
+                  <li>
+                      <a href="/real-estate-law" class="block realEstate  nav-linkss hover:text-[#3b7ea4] py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 "> Real Estate Law</a>
+                  </li>
+                  <li>
+                      <a href="/buisness-law" class="block buisnesslaw nav-linkss hover:text-[#3b7ea4] py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 ">Business Law</a>
+                  </li>
+                  <li>
+                      <a href="/estate-planing" class="block estateplaing nav-linkss hover:text-[#3b7ea4] py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 ">Estate Planning</a>
+                  </li>
+                  <li>
+                      <a href="/about-us" class="block aboutus nav-linkss hover:text-[#3b7ea4] py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 ">About us</a>
+                  </li>
+                  <li>
+                      <a href="/contact-us" class="block contactus nav-linkss hover:text-[#3b7ea4] py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 ">Contact Us</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+</header>
+<script>
+  $(document).ready(function () {
+  const realEstate = document.querySelector('.realEstate');
+  const buisnesslaw = document.querySelector('.buisnesslaw');
+  const estateplaing = document.querySelector('.estateplaing');
+  const aboutus = document.querySelector('.aboutus');
+  const contactus = document.querySelector('.contactus');
+
+  
+  const homebtn = document.querySelector('.homebtn')
+  $('.nav-linkss').click(function () {
+      $('.nav-linkss').removeClass('active');
+      $(this).addClass('active');
+  });
+  var url = window.location.pathname;
+  $('.nav-linkss').removeClass('active');
+  $('.nav-linkss[href="' + url + '"]').addClass('active');
+
+  if (url == '/real-estate-law') {
+      realEstate.addClass('active');
+  }
+  if (url == '/') {
+    homebtn.addClass('active');
+  }
+
+  if (url == '/buisness-law') {
+    buisnesslaw.addClass('active');
+  }
+  if (url == '/estate-planing') {
+    estateplaing.addClass('active');
+  }
+  if (url == '/about-us') {
+    aboutus.addClass('active');
+  }
+  if (url == '/contact-us') {
+    contactus.addClass('active');
+  }
+  
+
+});
+
+</script>

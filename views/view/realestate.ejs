@@ -1,0 +1,79 @@
+<% layout('./layouts/boilerplate.ejs')%> 
+
+<div class="relative h-96 overflow-hidden">
+    <img class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-auto"
+        src="imgs/awotitle-inner-harbor-of-baltimore-maryland-xl.jpg" alt="">
+    <div class="h-96"></div> <!-- Tailwind class for background overlay -->
+    <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-4xl font-bold text-white">
+        Real Estate Law</h1>
+</div>
+
+
+
+<br />
+<div class="container mx-auto flex flex-wrap pt-4 pb-12">
+    <!-- ASIDE: Sidebar for Information Sheets -->
+    <aside class="w-full lg:w-1/4 px-6">
+        <ul class="list-none mb-6">
+            <% informationSheets.forEach(function(sheet) { %>
+                <li class="text-lg mb-2">
+                    <a target="_blank" href="<%= sheet.link %>" class=" hover:text-cyan-500">
+                        <i class="bi bi-caret-right-fill"></i>
+                        <%= sheet.title %>
+                    </a>
+                </li>
+                <% }); %>
+        </ul>
+
+        <!-- Call to Action Section -->
+
+        <div class="bg-[#003553] text-white p-6 mb-6 ">
+            <h2 class="text-2xl mb-4 text-white">Need an Advice from Expert Lawyers?</h2>
+            <p class="mb-4 text-white">Get an Appointment Today!</p>
+            <a href="/contact-us" class="inline-block bg-cyan-500 hover:bg-blue-950 text-white py-2 px-4 rounded">
+                Get In Touch
+            </a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="w-full lg:w-1/2 px-6 text-base mx-10">
+
+
+        <!-- Real Estate Law Content -->
+        <article>
+            <h1 class="mb-4 font-bold text-3xl text-cyan-500 capitalize">Real estate legal guidance for smooth, secure, and fast property transactions.</h1>
+            
+            <!-- Real Estate Developers Section -->
+            <section>
+                <h2 class="text-xl font-semibold mb-2">Real Estate Developers</h2>
+                <p class="mb-4">We provide legal counsel to real estate developers in both commercial and residential
+                    developments. Our real estate team has extensive background in commercial and residential real
+                    estate title examination, abstracting, and curing title defects.</p>
+                <!-- Additional content... -->
+            </section>
+
+            <!-- Additional Sections -->
+            <section>
+                <h2 class="text-xl font-semibold mb-2">Lender Solutions</h2>
+                <p class="mb-4">AWO Law provides solutions for traditional, private, and hard money mortgage lenders. Our services include: drafting and
+                reviewing mortgage loan documents, drafting closing instructions, title commitment review, and HUD/ Settlement Statement
+                review. We assist lenders in preparing and filing mortgage releases and certificate of satisfaction. We also conduct
+                foreclosure proceedings, and eviction for unlawful detainers.</p>
+                <!-- Additional content... -->
+            </section>
+
+            <section>
+                <h2 class="text-xl font-semibold mb-2">Land Contracts</h2>
+                <p class="mb-4">AWO Law drafts and reviews land purchase contracts for commercial and residential real estate for individuals,
+                developers, investors, nonprofit organizations, and corporations. Commercial purchase contracts are often complicated.
+                With our extensive knowledge in commercial real estate, we help simplify the process and ensure our clients are well
+                protected.
+                
+                Call or send us an email today. We are always at your service!</p>
+                <!-- Additional content... -->
+            </section>
+        </article>
+    </main>
+</div>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
