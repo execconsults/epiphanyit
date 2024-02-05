@@ -39,27 +39,18 @@
 </div>
 <div class="vd wo/4 sd qo f ho oo wf yf" :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
 <nav>
-<ul class="tc _o sf yo cg ep">
-<li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a></li>
-<li><a href="index.html#features" class="xl">About</a></li>
-<li class="c i" x-data="{ dropdown: false }">
-<a href="#" class="xl tc wf yf bg" @click.prevent="dropdown = !dropdown" :class="{ 'mk': page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }">
-Service
-<svg :class="{ 'wh': dropdown }" class="th mm we fd pf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-</svg>
-</a>
-
-<ul class="a" :class="{ 'tc': dropdown }">
-<li><a href="blog-grid.html" class="xl" :class="{ 'mk': page === 'blog-grid' }">Careers</a></li>
-<li><a href="blog-single.html" class="xl" :class="{ 'mk': page === 'blog-single' }">Blog Single</a></li>
-
-<li><a href="404.html" class="xl" :class="{ 'mk': page === '404' }">404</a></li>
-</ul>
-
-</li>
-<li><a href="index.html#support" class="xl">Contact</a></li>
-</ul>
+  <ul class="tc _o sf yo cg ep">
+    <% if (page === 'home') { %>
+      <li><a href="/" class="xl mk">Home</a></li>
+    <% } else { %>
+      <li><a href="/" class="xl">Home</a></li>
+    <% } %>
+  
+    <li><a href="/about#features" class="xl <% if (page === 'about') { %>mk<% } %>">About</a></li>
+    <li><a href="/career#careers" class="xl <% if (page === 'careers') { %>mk<% } %>">Careers</a></li>
+    <li><a href="/service#services" class="xl <% if (page === 'services') { %>mk<% } %>">Services</a></li>
+    <li><a href="/contact#support" class="xl <% if (page === 'contact') { %>mk<% } %>">Contact</a></li>
+  </ul>
 </nav>
 <div class="tc wf ig pb no">
 <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
@@ -98,7 +89,7 @@ Service
 <p class="fq">
   Epiphany’s top-tier expertise, Microsoft solutions and SMART solutions are designed to save money and better manage costs</p>
 <div class="tc tf yo zf mb">
-<a href="#" class="ek jk lk gh gi hi rg ml il vc _d _l">Get Started Now</a
+<a href="/careers" class="ek jk lk gh gi hi rg ml il vc _d _l">Get Started Now</a
                 >
 <span class="tc sf">
 <a href="#" class="inline-block ek xj kk wm">
@@ -202,8 +193,47 @@ Service
 </div>
 </div>
 </section>
+<section class="about yn">
 
 
+<div class="mb-4 border-b border-gray-200 ">
+  <ul class="flex flex-wrap  -mb-px text-sm font-medium text-center justify-between" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+      <li class="me-2" role="presentation">
+          <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Introduction</button>
+      </li>
+      <li class="me-2" role="presentation">
+          <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Our work</button>
+      </li>
+      <li class="me-2" role="presentation">
+          <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Our Mission</button>
+      </li>
+      <li role="presentation">
+          <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Vision</button>
+      </li>
+  </ul>
+</div>
+<div id="default-tab-content">
+  <div class="hidden p-4 rounded-lg bg-gray-50 " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <p class="text-sm text-gray-500 ">Epiphany IT, LLC is a minority veteran owned small business that provides top-tier expertise and end-to-end consulting services focus on Microsoft Exchange adoption and deployment. Our extensive experience with clients such as the Department of Defense and partners such as Microsoft sets us apart. Our subject matter experts focus on your organization’s goal, infrastructure and applications to provide you the dynamic and integrated solution you desire. This approach allows us to deliver cost-effective solutions that exceed expectations. Our primary focus is Customer Satisfaction, quality services, and cost effective solutions. Epiphany Subject Matter Experts (SMEs) collaborate with our clients to deliver an exceedingly professional SMART solution that meets your goals and expectations.</p>
+  </div>
+  <div class="hidden p-4 rounded-lg bg-gray-50 " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+      <p class="text-sm text-gray-500 ">
+        <p>	We design, deploy, and manage Microsoft Exchange services for your organizations. Our knowledgeable experts ensures that you get your Return On Investment and that it fits your business needs.</p>
+        <p>Our Microsoft Exchange SME’s acts as an advisor for day to day operations and maintenance regarding your Microsoft Exchange environment and provides training for system owners and on site Exchange Administrators. </p>
+        <p>Our Microsoft Exchange Consultant’s perform network design, discovery and environmental assessment in order to offer customized solution that suits your business needs and provide solutions that minimize Total Cost of Ownership
+        </p>
+      </p>
+  </div>
+  <div class="hidden p-4 rounded-lg bg-gray-50 " id="settings" role="tabpanel" aria-labelledby="settings-tab">
+      <p class="text-sm text-gray-500 ">Epiphany’s mission is to provide, economical, highly reliable, sustainable, and measureable Microsoft Exchange solution to government and industry. Furthermore, Epiphany wants to offer an ideal working environment for our customers and team in which enthusiasm, creativity and results have a central place.</p>
+  </div>
+  <div class="hidden p-4 rounded-lg bg-gray-50 " id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+      <p class="text-sm text-gray-500 ">Epiphany aims to become a market leader in providing Microsoft Exchange solutions and wants to be the best choice for customers that inquire services at the highest level of knowledge and quality.</p>
+  </div>
+</div>
+
+</section>
+<br>
 <section class="i pg ji gp uq">
 
 <span class="rc h s r vd fd/5 fh rm"></span>
@@ -338,8 +368,8 @@ Service
 </section>
 
 
-<section class="lj tp kr">
-
+<section id="services" class="lj services yn tp kr">
+<br>
 <div x-data="{ sectionTitle: `We Offer The Best Quality Service for You`, sectionTitleText: `At Epiphany our services are customer oriented. We ensure customer requests are planned, delivered, and managed in a timely manner.`}">
 <div class="animate_top bb ze rj ki xn vq">
 <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b">
@@ -590,7 +620,7 @@ Join and get started with us
 </p>
 </div>
 <div class="animate_right bf">
-<a href="#" class="vc ek kk hh rg ol il cm gi hi">
+<a href="/careers" class="vc ek kk hh rg ol il cm gi hi">
 Get Started Now
 </a>
 </div>
@@ -617,18 +647,21 @@ Get Started Now
 <div class="animate_top">
 <h4 class="kk wm tj ec">Quick Links</h4>
 <ul>
-<li><a href="#" class="sc xl vb">Home</a></li>
-<li><a href="#" class="sc xl vb">Product</a></li>
+<li><a href="/" class="sc xl vb">Home</a></li>
+<li><a href="/about#features" class="sc xl vb">About</a></li>
 <li>
-<a href="#" class="sc xl vb">
+<a href="careers.html" class="sc xl vb">
 Careers
-<span class="sc ek uj lk nh rg zi _i nc">Hiring</span>
+<span class="sc ek uj lk nh rg zi _i nc">link</span>
 </a>
 </li>
-<li><a href="#" class="sc xl vb">Pricing</a></li>
+<li><a href="/contact#support" class="sc xl vb">Contact</a></li>
+<li><a href="/service#services" class="sc xl vb">Service</a></li>
+
+
 </ul>
 </div>
-<div class="animate_top">
+<div class="animate_top hidden">
 <h4 class="kk wm tj ec">Services</h4>
 <ul>
 <li><a href="#" class="sc xl vb">Web Development</a></li>
@@ -640,10 +673,8 @@ Careers
 <div class="animate_top">
 <h4 class="kk wm tj ec">Support</h4>
 <ul>
-<li><a href="#" class="sc xl vb">Company</a></li>
-<li><a href="#" class="sc xl vb">Press media</a></li>
-<li><a href="#" class="sc xl vb">Our Blog</a></li>
-<li><a href="#" class="sc xl vb">Contact Us</a></li>
+<li><a href="/contact#support" class="sc xl vb">Contact</a></li>
+
 </ul>
 </div>
 
@@ -677,6 +708,8 @@ Careers
 <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
 <script defer src="bundle.js"></script><script>(function(){var js = "window['__CF$cv$params']={r:'850576831c495979',t:'MTcwNzA3NjQzOS41ODQwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='cdn-cgi/challenge-platform/h/b/scripts/jsd/24864818/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"850576831c495979","version":"2024.2.0","r":1,"token":"9a6015d415bb4773a0bff22543062d3b","b":1}' crossorigin="anonymous"></script>
 </body>
 

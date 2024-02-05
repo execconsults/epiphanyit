@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Epiphany IT,a minority veteran owned small business</title>
+    <link rel="icon" href="favicon.ico"><link href="style.css" rel="stylesheet"></head>
+    <body x-data="{ page: 'home', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }" x-init="
+             darkMode = JSON.parse(localStorage.getItem('darkMode'));
+             $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))" :class="{'b eh': darkMode === true}">
+    
+    <header class="g s r vd ya cj" :class="{ 'hh sm _k dj bl ll' : stickyMenu }" @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false">
+    <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
+    <div class="vd to/4 tc wf yf">
+    <a href="index.html">
+    <img class="om" src="images/logo-light.png" alt="Logo Light" />
+    <img class="xc nm" src="images/logo-light.png" alt="Logo Dark" />
+    </a>
+    
+    <button class="po rc" @click="navigationOpen = !navigationOpen">
+    <span class="rc i pf re pd">
+    <span class="du-block h q vd yc">
+    <span class="rc i r s eh um tg te rd eb ml jl dl" :class="{ 'ue el': !navigationOpen }"></span>
+    <span class="rc i r s eh um tg te rd eb ml jl fl" :class="{ 'ue qr': !navigationOpen }"></span>
+    <span class="rc i r s eh um tg te rd eb ml jl gl" :class="{ 'ue hl': !navigationOpen }"></span>
+    </span>
+    <span class="du-block h q vd yc lf">
+    <span class="rc eh um tg ml jl el h na r ve yc" :class="{ 'sd dl': !navigationOpen }"></span>
+    <span class="rc eh um tg ml jl qr h s pa vd rd" :class="{ 'sd rr': !navigationOpen }"></span>
+    </span>
+    </span>
+    </button>
+    
+    </div>
+    <div class="vd wo/4 sd qo f ho oo wf yf" :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
+    <nav>
+    <ul class="tc _o sf yo cg ep">
+    <li><a href="index.html" class="xl" >Home</a></li>
+    <li><a href="index.html#features" class="xl">About</a></li>
+    <li><a href="careers.html" class="xl" :class="{ 'mk': page === 'home' }"  >Careers</a></li>
+    
+    <li><a href="index.html#services" class="xl">Services</a></li>
+    
+    <li><a href="index.html#support" class="xl">Contact</a></li>
+    
+    </ul>
+    </nav>
+    <div class="tc wf ig pb no">
+    <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
+    <label class="rc ab i">
+    <input type="checkbox" :value="darkMode" @change="darkMode = !darkMode" class="pf vd yc uk h r za ab" />
+    
+    <svg :class="{ 'wn' : page === 'home', 'xh' : page === 'home' && stickyMenu }" class="th om" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.0908 18.6363C10.3549 18.6363 8.69 17.9467 7.46249 16.7192C6.23497 15.4916 5.54537 13.8268 5.54537 12.0908C5.54537 10.3549 6.23497 8.69 7.46249 7.46249C8.69 6.23497 10.3549 5.54537 12.0908 5.54537C13.8268 5.54537 15.4916 6.23497 16.7192 7.46249C17.9467 8.69 18.6363 10.3549 18.6363 12.0908C18.6363 13.8268 17.9467 15.4916 16.7192 16.7192C15.4916 17.9467 13.8268 18.6363 12.0908 18.6363ZM12.0908 16.4545C13.2481 16.4545 14.358 15.9947 15.1764 15.1764C15.9947 14.358 16.4545 13.2481 16.4545 12.0908C16.4545 10.9335 15.9947 9.8236 15.1764 9.00526C14.358 8.18692 13.2481 7.72718 12.0908 7.72718C10.9335 7.72718 9.8236 8.18692 9.00526 9.00526C8.18692 9.8236 7.72718 10.9335 7.72718 12.0908C7.72718 13.2481 8.18692 14.358 9.00526 15.1764C9.8236 15.9947 10.9335 16.4545 12.0908 16.4545ZM10.9999 0.0908203H13.1817V3.36355H10.9999V0.0908203ZM10.9999 20.8181H13.1817V24.0908H10.9999V20.8181ZM2.83446 4.377L4.377 2.83446L6.69082 5.14828L5.14828 6.69082L2.83446 4.37809V4.377ZM17.4908 19.0334L19.0334 17.4908L21.3472 19.8046L19.8046 21.3472L17.4908 19.0334ZM19.8046 2.83337L21.3472 4.377L19.0334 6.69082L17.4908 5.14828L19.8046 2.83446V2.83337ZM5.14828 17.4908L6.69082 19.0334L4.377 21.3472L2.83446 19.8046L5.14828 17.4908ZM24.0908 10.9999V13.1817H20.8181V10.9999H24.0908ZM3.36355 10.9999V13.1817H0.0908203V10.9999H3.36355Z" fill />
+    </svg>
+    
+    <img class="xc nm" src="images/icon-moon.svg" alt="Moon" />
+    </label>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    </header>
+    
+
+<main>
+    <section id="support" class="i pg fh rm ji gp uq">
+
+
+        <div x-data="{ sectionTitle: `Careers`, sectionTitleText: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using.`}">
+        <div class="animate_top bb ze rj ki xn vq">
+        <h2 x-text="sectionTitle" class="fk vj pr kk wm on/5 gq/2 bb _b">
+        </h2>
+        <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
+        </div>
+        </div>
+        
+        <div class="i va bb ye ki xn wq jb mo">
+        <div class="tc uf sn tf rn un zf xl:gap-10">
+        <div class="animate_top w-full mn/5 to/3 vk sg hh sm yh rq i pg">
+        
+        <img src="images/shape-03.svg" alt="Shape" class="h la x wd" />
+        <img src="images/shape-06.svg" alt="Shape" class="h la ma ne kf" />
+        <div class="fb">
+        <p>
+            The Epiphany company culture is simply, family oriented. Our employees are considered one huge family. We encourage success, education, collaboration, ideas, new technologies, and a healthy work place. We believe in a comprehensive benefits plan and investment for the future.
+            
+            </p>
+            <b>Employment Opportunities
+            </b>
+            <ul class="max-w-md space-y-1 text-gray-500 list-inside ">
+                <li class="flex items-center">
+                    <svg class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"></path>
+                     </svg>
+                     Microsoft Exchange Expert
+                    </li>
+                <li class="flex items-center">
+                    <svg class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"></path>
+                     </svg>
+                     Microsoft Exchange Consultant </li>
+                 
+              </ul>
+        </div>
+        
+        <span class="rc nd rh tm lc fb"></span>
+        
+        </div>
+        <div class="animate_top w-full nn/5 vo/3 vk sg hh sm yh tq">
+        <form action="https://formbold.com/s/unique_form_id" method="POST">
+        <div class="tc sf yo ap zf ep qb">
+        <div class="vd to/2">
+        <label class="rc ac" for="fullname">Full name</label>
+        <input type="text" name="fullname" id="fullname" placeholder="Devid Wonder" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
+        </div>
+        <div class="vd to/2">
+        <label class="rc ac" for="email">Email address</label>
+        <input type="email" name="email" id="email" placeholder="example@gmail.com" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
+        </div>
+        </div>
+        <div class="tc sf yo ap zf ep qb">
+        <div class="vd to/2">
+        <label class="rc ac" for="phone">Phone number</label>
+        <input type="text" name="phone" id="phone" placeholder="+009 3342 3432" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
+        </div>
+        <div class="vd to/2">
+        <label class="rc ac" for="subject">Subject</label>
+        <input type="text" for="subject" id="subject" placeholder="Type your subject" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 xi mi" />
+        </div>
+        </div>
+        <div class="fb">
+        <label class="rc ac" for="message">Message</label>
+        <textarea placeholder="Message" rows="4" name="message" id="message" class="vd ph sg zk xm _g ch pm hm dm dn em pl/50 ci"></textarea>
+        </div>
+        <div class="tc xf">
+        <button class="vc rg lk gh ml il hi gi _l">Send Message</button>
+        </div>
+        </form>
+        </div>
+        </div>
+        </div>
+        </section>
+</main>
+
+<footer>
+    <div class="bb ze ki xn 2xl:ud-px-0">
+    
+    <div class="ji gp">
+    <div class="tc uf ap gg fp">
+    <div class="animate_top zd/2 to/4">
+    <a href="index.html">
+    <img src="images/logo-light.png" alt="Logo" class="om" />
+    <img src="images/logo-light.png" alt="Logo" class="xc nm" />
+    </a>
+    <p class="lc fb">Epiphany IT, minority veteran owned small business</p>
+    
+    </div>
+    <div class="vd ro tc sf rn un gg vn">
+    <div class="animate_top">
+    <h4 class="kk wm tj ec">Quick Links</h4>
+    <ul>
+    <li><a href="index.html" class="sc xl vb">Home</a></li>
+    <li><a href="index.html#features" class="sc xl vb">About</a></li>
+    <li>
+    <a href="careers.html" class="sc xl vb">
+    Careers
+    <span class="sc ek uj lk nh rg zi _i nc">link</span>
+    </a>
+    </li>
+    <li><a href="index.html#support" class="sc xl vb">Contact</a></li>
+    <li><a href="index.html#services" class="sc xl vb">Service</a></li>
+    
+    
+    </ul>
+    </div>
+    
+    <div class="animate_top">
+    <h4 class="kk wm tj ec">Support</h4>
+    <ul>
+    <li><a href="index.html#support" class="sc xl vb">Contact</a></li>
+    
+    </ul>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    
+    
+    <div class="bh ch pm tc uf sf yo wf xf ap cg fp bj">
+    <div class="animate_top">
+    <ul class="tc wf gg">
+    <li><a href="#" class="xl">English</a></li>
+    
+    </ul>
+    </div>
+    <div class="animate_top">
+    <p>&copy; 2024 Base. All rights reserved POWERED BY <a href="http://executiveconsults.com/"> EXECUTIVE CONSULTS</a> </p>
+    </div>
+    </div>
+    
+    </div>
+    </footer>
+    
+
+
+<button class="xc wf xf ie ld vg sr gh tr g sa ta _a" @click="window.scrollTo({top: 0, behavior: 'smooth'})" @scroll.window="scrollTop = (window.pageYOffset > 50) ? true : false" :class="{ 'uc' : scrollTop }">
+<svg class="uh se qd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z" />
+</svg>
+</button>
+
+<script defer src="bundle.js"></script><script>(function(){var js = "window['__CF$cv$params']={r:'850576922bcf399a',t:'MTcwNzA3NjQ0Mi4xNDEwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='cdn-cgi/challenge-platform/h/b/scripts/jsd/24864818/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"850576922bcf399a","version":"2024.2.0","r":1,"token":"9a6015d415bb4773a0bff22543062d3b","b":1}' crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from base-tailwind.preview.uideck.com/blog-grid by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Feb 2024 19:54:20 GMT -->
+</html>
