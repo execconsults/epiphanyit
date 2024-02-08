@@ -69,7 +69,10 @@ app.use(flash());
     res.render('index.ejs',{page:'home'})
  })
 
-
+ app.get('/home',(req,res)=>{
+  res.render('index.ejs',{page:'home'})
+})
+ 
  app.get('/about',(req,res)=>{
   res.render('index.ejs',{page:'about'})
 })
