@@ -66,7 +66,7 @@ app.use(flash());
 
 
  app.get('/',(req,res)=>{
-    res.render('index.ejs',{page:'home'})
+    res.render('./view/index.ejs',{page:'home'})
  })
 
  app.get('/home',(req,res)=>{
@@ -84,7 +84,7 @@ app.get('/service',(req,res)=>{
   res.render('index.ejs',{page:'service'})  
 })
 app.get('/contact',(req,res)=>{
-  res.render('index.ejs',{page:'contact'})
+  res.render('./view/request-demo.ejs',{page:'contact'})
 })
 
 app.get('/atom.xml', async (req, res) => {
