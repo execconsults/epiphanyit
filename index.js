@@ -69,19 +69,16 @@ app.use(flash());
     res.render('./view/index.ejs',{page:'home'})
  })
 
- app.get('/home',(req,res)=>{
-  res.render('index.ejs',{page:'home'})
-})
- 
+
  app.get('/about',(req,res)=>{
-  res.render('index.ejs',{page:'about'})
+  res.render('./view/about.ejs',{page:'about'})
 })
 app.get('/career',(req,res)=>{
   
-  res.render('careers.ejs',{page:'careers'})
+  res.render('./view/careers.ejs',{page:'careers'})
 })
 app.get('/service',(req,res)=>{
-  res.render('index.ejs',{page:'service'})  
+  res.render('./view/service.ejs',{page:'service'})  
 })
 app.get('/contact',(req,res)=>{
   res.render('./view/request-demo.ejs',{page:'contact'})
