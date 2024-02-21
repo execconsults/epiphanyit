@@ -1,16 +1,137 @@
-<!DOCTYPE html><html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>EPIPHANY IT - Contact</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/vendors/aos.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+<script>
+    
+    function googleTranslateElementInit() {
+        var translateElement = new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,ar,bn,de,es,fr,hi,it,ja,ko,nl,pl,pt,ru,th,tr,vi,zh-CN,zh-TW',
+            layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+            autoDisplay: false,
+            gaTrack: true,
+            noAutoflip: true, // Add this parameter to disable the top pop-up when a user selects a language
+            gaId: 'UA-XXXXXXXX-X'
+        }, 'google_translate_element');
 
-<script defer data-domain='preview.cruip.com,rollup.cruip.com' src='../../plausible.cruip.com/js/script.js'></script></head>
+        var selectedLanguageInput = document.getElementById('selectedLanguageInput');
 
-<body class="cv9im cpn01 cjx0x c7mbx cj439">
+        google.translate.TranslateElement.prototype.selectLanguage = function (lang) {
+            google.translate.TranslateElement.prototype.selectLanguage.apply(this, arguments);
+            selectedLanguageInput.value = lang;
+        };
 
+        var translateButton = document.createElement('button');
+        translateButton.className = 'goog-te-button';
+        translateButton.innerHTML = 'Translate';
+        translateButton.onclick = function () {
+            translateElement.showWidget();
+        };
+        document.getElementById('google_translate_element').appendChild(translateButton);
+    }
+
+
+</script>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to Epiphany IT,a minority veteran owned small business</title>
+        <meta name='description'         content="Epiphany IT is a top-tier expert and Microsoft solutions provider of solutions designed to save operational expenses and create efficient business operations">
+        <meta property='og:description'  content="Epiphany IT is a top-tier expert and Microsoft solutions provider of solutions designed to save operational expenses and create efficient business operations">
+        <meta name='twitter:description' content="Epiphany IT is a top-tier expert and Microsoft solutions provider of solutions designed to save operational expenses and create efficient business operations">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="css/vendors/aos.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    <script defer data-domain='preview.cruip.com,rollup.cruip.com' src='../../plausible.cruip.com/js/script.js'></script></head>
+    
+<body>
+        <!-- Site header -->
+        <header class="cd7c9 ce83r crb4e c3yre">
+            <div class="cwq08 cui38 cc4l3 cxnjg">
+                <div class="c3as5 cpccj cewtd cmxqt cdiok">
+  
+             
+                    <!-- Desktop navigation -->
+                    <nav class="csvbf cm9ae cv4f1">
+  
+                        <!-- Desktop menu links -->
+                        <ul class="co3jc cpccj cc7kb cmxqt cymr7">
+                          <li>
+                              <a class="c8byp cjtfg ceywl cpn01 cpccj cgylk cy5nw czxk3 cebnw c9oso cmxqt cuy8x cpet4" href="/">Home</a>
+                          </li>
+                            <li>
+                                <a class="c8byp cjtfg ceywl cpn01 cpccj cgylk cy5nw czxk3 cebnw c9oso cmxqt cuy8x cpet4" href="/about">About</a>
+                            </li>
+                            <li>
+                              <a class="c8byp cjtfg ceywl cpn01 cpccj cgylk cy5nw czxk3 cebnw c9oso cmxqt cuy8x cpet4" href="/service">Service</a>
+                          </li>
+                          <li>
+                              <a class="c8byp cjtfg ceywl cpn01 cpccj cgylk cy5nw czxk3 cebnw c9oso cmxqt cuy8x cpet4" href="/career">Career</a>
+                          </li>
+                            <!-- <li>
+                                <a class="c8byp cjtfg ceywl cpn01 cpccj cgylk cy5nw czxk3 cebnw c9oso cmxqt cuy8x cpet4" href="blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a class="c8byp cjtfg ceywl cpn01 cpccj cgylk cy5nw czxk3 cebnw c9oso cmxqt cuy8x cpet4" href="wall-of-love.html">Wall of Love</a>
+                            </li> -->
+                            <!-- 1st level: hover -->
+                          
+                        </ul>
+  
+                        <!-- Desktop sign in links -->
+                        <ul class="cpccj cc6z4 cc7kb cmxqt cymr7">
+  
+                            <li>
+                                <a class="c8q3m cmbhb ckuoi cpccj cgylk cy5nw czxk3 cebnw c9oso cuuxz cmxqt cuy8x cpet4" href="/contact">Contact us <span class="co5k7 cgu87 cs01c ckuoi cgylk czxk3 coc2c">-&gt;</span></a>
+                            </li>
+                        </ul>
+  
+                    </nav>
+                    
+                    <!-- Mobile menu -->
+                    <div class="ca6e5 cmxqt" x-data="{ expanded: false }">
+  
+                        <!-- Hamburger button -->
+                        <button class="cddv9" :class="{ 'active': expanded }" @click.stop="expanded = !expanded" aria-controls="mobile-nav" :aria-expanded="expanded">
+                            <span class="ctg7a">Menu</span>
+                            <svg class="cwtrp c9p59 c6urr cmo7l cssmu" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <rect y="4" width="24" height="2"></rect>
+                                <rect y="11" width="24" height="2"></rect>
+                                <rect y="18" width="24" height="2"></rect>
+                            </svg>
+                        </button>
+  
+                        <!-- Mobile navigation -->
+                        <nav id="mobile-nav" class="cefnj cmyiy cd7c9 cciiv cdiod cj439 cgvj7 ce83r cei4k co8ir" @click.away="expanded = false" @keydown.escape.window="expanded = false" x-show="expanded" x-transition:enter="cebnw ch6f7 cc4ps cuxdo" x-transition:enter-start="cyixi c7pni" x-transition:enter-end="c03gd cid49" x-transition:leave="cebnw ch6f7 cc4ps" x-transition:leave-start="c03gd" x-transition:leave-end="cyixi" x-cloak="">
+                            <ul class="cxnjg cpet4">
+                              <li>
+                                  <a class="cjtfg cpn01 cy5nw cmxqt cpet4" href="/">Home</a>
+                              </li>
+                              <li>
+                                  <a class="cjtfg cpn01 cy5nw cmxqt cpet4" href="/about">About</a>
+                              </li>
+                                <li>
+                                    <a class="cjtfg cpn01 cy5nw cmxqt cpet4" href="/service">Service</a>
+                                </li>
+  
+                                <li>
+                                    <a class="cjtfg cpn01 cy5nw cmxqt cpet4" href="/career">Career</a>
+                                </li>
+                          
+                        
+                                <li>
+                                    <a class="ckuoi cy5nw cuuxz cmxqt cpet4" href="/contact">Contact us<span class="co5k7 cgu87 cs01c ckuoi cgylk czxk3 coc2c">-&gt;</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+  
+                    </div>
+  
+                </div>
+            </div>
+        </header>
     <main class="cmxqt">
 
         <!-- Content -->
@@ -118,11 +239,19 @@
 
     </main>
 
-    <script src="js/vendors/alpinejs.min.js" defer=""></script>
-    <script src="js/vendors/aos.js"></script>
-    <script src="js/main.js"></script>
-
-
-
+ 
 </body>
+
+
+
 </html>
+<link rel="stylesheet" href="stylesheet/home.css">
+
+
+
+<script src="/javascript/home.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script> 
+
+
+<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://assets.website-files.com/5dd4413d36613959e9a5f5ea/js/webflow.300dc2d58.js" type="text/javascript"></script>
